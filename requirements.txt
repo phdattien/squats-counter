@@ -1,0 +1,4 @@
+ipykernel
+numpy
+opencv-python
+mediapipe
