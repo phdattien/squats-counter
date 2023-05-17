@@ -65,8 +65,11 @@ def main(args: argparse.Namespace):
         if not success:
             break
 
-        # img = down_scale(img, 50)
-        img = down_scale(img, 50)
+        if args.video_stream == str(0):
+            img = down_scale(img, 200)
+        else:
+            img = down_scale(img, 50)
+
         img = detector.find_pose(img)
         lmList = detector.getPositions(img, False)
 
